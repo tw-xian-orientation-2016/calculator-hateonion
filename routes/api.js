@@ -24,7 +24,7 @@ router.post('/division', (req, res) => {
 });
 
 router.post('/percentage', (req, res) => {
-  let result = parseInt(req.body.num1) / 100;
+  let result = parseInt(req.body.num1) / 100.00;
   res.json(result);
 });
 
