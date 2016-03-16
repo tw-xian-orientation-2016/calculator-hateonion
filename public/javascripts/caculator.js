@@ -74,6 +74,7 @@ function chooseApi() {
   operator = "";
   num1 = num2;
   num2 = "";
+  updateNumber(num1);
 }
 
 function apiPercentage() {
@@ -114,8 +115,13 @@ function apiMultiply() {
 
 function apiDivision() {
   $.post('/api/division', {num1 : num1, num2: num2 }, (data)=>{
-    num1 = data;
-    updateNumber(data);
+    if(data === null) {
+      updateNumber('Infinity');
+      num1 = '';
+    } else{
+      updateNumber(data);
+      num1 = data;
+    }
   });
 }
 
