@@ -1,0 +1,20 @@
+[name="number"] {
+  margin: 1em;
+}
+
+[name="operator"] {
+  margin: 1em;
+}
+
+#zero{
+  width: 38%
+}
+
+#screen h2{
+  text-align: right;
+}
+
+#AC {
+  display: none;
+}
+
